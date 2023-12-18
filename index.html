@@ -8,7 +8,12 @@
 </head>
 <body>
     <div class="header">
-         <h1>Sign-up Form</h1>
+         <div>
+             <h1>Sign-up Form</h1>
+         </div>
+         <p>
+             Image provided by
+         </p>
     </div>
    <div class="content">
        <p>
@@ -34,21 +39,33 @@
         <section>
             <label for="user_email">
                 Email:
-                <input type="email" name="email" id="user_email">
+                <span aria-label="required">*</span>
+                <input type="email" name="email" id="user_email" required>
+                <!-- This field is required.
+                Please enter a valid email address -->
             </label>
             <label for="phone">
                 Phone:
                 <input type="text" name="phone" id="phone">
+                <!-- Please enter your phone number in the format xxx-xxxx -->
         </label>
         </section>
         <section>
-            <label for="password">
+            <label for="pwd">
                 Password:
-                <input type="password" name="password" id="password">
+                <span aria-label="required">*</span>
+                <input type="password" name="pwd" id="pwd" class="error" required minlength="8" maxlength="30">
+                <!-- This field is required.
+                Your password needs to be between 8 and 30 characters long and contain 
+                one uppercase letter, one symbol, and a number.
+                Passwords must match. -->
             </label>
             <label for="confirm_pwd">
                 Confirm Password:
-                <input type="password" name="confirm_pwd" id="confirm_pwd">
+                <span aria-label="required">*</span>
+                <input type="password" name="confirm_pwd" id="confirm_pwd" class="error" required>
+                <!-- This field is required.
+                Passwords must match. -->
         </label>
         </section>
         <input type="submit" id="sign-up" class="hidden">
