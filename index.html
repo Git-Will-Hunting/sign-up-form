@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+         <h1>Sign-up Form</h1>
+    </div>
+   <div class="content">
+       <p>
+        This is not a real sign-up form. This is a project for a course.
+        Sign up <i>now</i> to get started.
+       </p>
+       <p>
+        You <i>know</i> you want to.
+       </p>
+   
+    <form action="/my-handling-form-page" method="post">
+        <p>Let's do this!</p>
+        <section>
+            <label for="first_name">
+                First Name:
+                <input type="text" name="first_name" id="first_name">
+        </label>
+            <label for="last_name">
+                Last Name:
+                <input type="text" name="last_name" id="last_name">
+            </label>
+        </section>
+        <section>
+            <label for="user_email">
+                Email:
+                <input type="email" name="email" id="user_email">
+            </label>
+            <label for="phone">
+                Phone:
+                <input type="text" name="phone" id="phone">
+        </label>
+        </section>
+        <section>
+            <label for="password">
+                Password:
+                <input type="password" name="password" id="password">
+            </label>
+            <label for="confirm_pwd">
+                Confirm Password:
+                <input type="password" name="confirm_pwd" id="confirm_pwd">
+        </label>
+        </section>
+        <input type="submit" id="sign-up" class="hidden">
+    </form>
+    <div>
+        <div class="button">
+            <label type="submit" for="sign-up"><button>Create Account</button></label>
+        </div>
+        <div>
+            <p>Already have an account? <a href="#">Sign in</a></p>
+        </div>
+    </div>
+</body>
+</html>
