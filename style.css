@@ -1,40 +1,73 @@
 html {
-    height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #fff;
+    color: #000;
+    height: 100%;
+}
+.content {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 100vh;
+    background-image: url("Resources/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.header>img{
-    width: 100%;
+.header>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .header>p{
-    position: fixed;
+    position: relative;
     bottom: 10px;
 }
+.header>div>h1{
+    display: flex;
+    background-color:rgba(20, 20, 20, .5);
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    color: white;
+}
 
-.content{
+.right{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-right: 10px;
+    padding: 0 20px;
+    margin: 0;
 }
 
-.content>p{
-    font-size: 1.5em;
+.right>p{
+    font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -107,7 +140,7 @@ input:valid {
     border: 2px solid black;
 }
 
-:focus {
+input:focus {
     box-shadow: 1px 1px 5px 1px #aaa;
     border: 2px solid #47c;
     outline: none;

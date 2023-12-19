@@ -5,77 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form Project</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
-    <div class="header">
-         <div>
-             <h1>Sign-up Form</h1>
-         </div>
-         <p>
-             Image provided by
-         </p>
-    </div>
-   <div class="content">
-       <p>
-        This is not a real sign-up form. This is a project for a course.
-        Sign up <i>now</i> to get started.
-       </p>
-       <p>
-        You <i>know</i> you want to.
-       </p>
-   
-    <form action="/my-handling-form-page" method="post">
-        <p>Let's do this!</p>
-        <section>
-            <label for="first_name">
-                First Name:
-                <input type="text" name="first_name" id="first_name">
-        </label>
-            <label for="last_name">
-                Last Name:
-                <input type="text" name="last_name" id="last_name">
-            </label>
-        </section>
-        <section>
-            <label for="user_email">
-                Email:
-                <span aria-label="required">*</span>
-                <input type="email" name="email" id="user_email" required>
-                <!-- This field is required.
-                Please enter a valid email address -->
-            </label>
-            <label for="phone">
-                Phone:
-                <input type="text" name="phone" id="phone">
-                <!-- Please enter your phone number in the format xxx-xxxx -->
-        </label>
-        </section>
-        <section>
-            <label for="pwd">
-                Password:
-                <span aria-label="required">*</span>
-                <input type="password" name="pwd" id="pwd" class="error" required minlength="8" maxlength="30">
-                <!-- This field is required.
-                Your password needs to be between 8 and 30 characters long and contain 
-                one uppercase letter, one symbol, and a number.
-                Passwords must match. -->
-            </label>
-            <label for="confirm_pwd">
-                Confirm Password:
-                <span aria-label="required">*</span>
-                <input type="password" name="confirm_pwd" id="confirm_pwd" class="error" required>
-                <!-- This field is required.
-                Passwords must match. -->
-        </label>
-        </section>
-        <input type="submit" id="sign-up" class="hidden">
-    </form>
-    <div>
-        <div class="button">
-            <label type="submit" for="sign-up"><button>Create Account</button></label>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="Resources/Logo.png" alt="logo"> -->
+                 <h1>Sign-up Form</h1>
+             </div>
+             <p>
+                Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+             </p>
         </div>
+           <div class="right">
+           <p>
+            This is not a real sign-up form. This is a project for a course.
+            Sign up <i>now</i> to get started. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. In porro a quaerat sed eius, soluta praesentium tempore
+            mollitia rerum recusandae, quis cum ad repudiandae maiores. Amet repellat
+            numquam temporibus odit?
+           </p>
+           <p>
+            You <i>know</i> you want to.
+           </p>
+        <form action="/my-handling-form-page" method="post" autocomplete="off">
+            <p>Let's do this!</p>
+            <section>
+                <label for="first_name">
+                    First Name:
+                    <input type="text" name="first_name" id="first_name" autocomplete="off">
+            </label>
+                <label for="last_name">
+                    Last Name:
+                    <input type="text" name="last_name" id="last_name" autocomplete="off">
+                </label>
+            </section>
+            <section>
+                <label for="user_email">
+                    Email:
+                    <span aria-label="required">*</span>
+                    <input type="email" name="email" id="user_email" required autocomplete="off">
+                    <!-- This field is required.
+                    Please enter a valid email address -->
+                </label>
+                <label for="phone">
+                    Phone:
+                    <input type="text" name="phone" id="phone" placeholder="(xxx) xxx-xxxx" pattern="^\(\d{3}\)\s\d{3}-\d{4}$" autocomplete="off">
+                    <!-- Please enter your phone number in the format xxx-xxxx -->
+            </label>
+            </section>
+            <section>
+                <label for="pwd">
+                    Password:
+                    <span aria-label="required">*</span>
+                    <input type="password" name="pwd" id="pwd" class="error" required minlength="8" pattern="(?=.*\d)(?=.*[A-Z])(?=.*\W).{8,30}" autocomplete="new-password">
+                    <!-- This field is required.
+                    Your password needs to be between 8 and 30 characters long and contain
+                    one uppercase letter, one symbol, and a number.
+                    Passwords must match. -->
+                </label>
+                <label for="confirm_pwd">
+                    Confirm Password:
+                    <span aria-label="required">*</span>
+                    <input type="password" name="confirm_pwd" id="confirm_pwd" class="error" required autocomplete="new-password">
+                    <!-- This field is required.
+                    Passwords must match. -->
+            </label>
+            </section>
+            <input type="submit" id="sign-up" class="hidden">
+        </form>
         <div>
-            <p>Already have an account? <a href="#">Sign in</a></p>
+            <div class="button">
+                <button><label type="submit" for="sign-up">Create Account</label></button>
+            </div>
+            <div>
+                <p>Already have an account? <a href="#">Sign in</a></p>
+            </div>
         </div>
     </div>
 </body>
